@@ -1,0 +1,76 @@
+.menu{
+  width: 14rem;
+  height: 14rem;
+  position: absolute;
+  z-index: 1111;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.menu li{
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+  transform-origin: 7rem;
+  transform: rotate(0deg) translatex(6rem);
+  opacity: 0;
+}
+
+.menu li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  color: white;
+  background-color: var(--clr);
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: rotate(calc(360deg / -5 * var(--i)));
+  transition: 1s;
+}
+
+.menu li a:hover{
+  transition: 0s;
+  box-shadow: 0 0 10px var(--clr),
+              0 0 30px var(--clr),
+              0 0 50px var(--clr);
+  border-color: var(--clr);
+  color: black;
+}
+
+.menu .toggle{
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2000;
+  transition: 0.5s;
+}
+
+#active{
+  display: none;
+}
+
+#active:checked ~ .toggle{
+  transform: rotate(315deg);
+}
+#active:checked ~ li{
+  transform: rotate(calc(360deg / 5 * var(--i))) translatex(0px);
+  opacity: 1;
+}

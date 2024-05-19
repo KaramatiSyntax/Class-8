@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="Contact.css">
+  <title>Class - 8</title>
+</head>
+<body>
+<section class="contact-section">
+  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="a2bf8418-bb9d-4fce-956e-891230512ca0" />
+    <input type="hidden" name="subject" value="of ${class} " />
+    <input type="hidden" name="from_name" value="${first_name} Contact us" />
+    
+    <div class="form-group-container">
+       <h2>Contact Us</h2>
+      <div class="form-group">
+        <label for="name" class="form-label">Name -</label>
+        <input id="name" name="name" class="form-input" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="class" class="form-label">Class -</label>
+        <input id="class" name="class" class="form-input" type="text" />
+        <label for="sec" class="form-label">sec -</label>
+        <input id="sec" name="sec" class="form-input" type="text" />
+      </div>
+      <div class="form-group text">
+        <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+      </div>
+    </div>
+    <input type="hidden" name="redirect" value="https://dav-class-8.000webhostapp.com/Thanks.html#">
+    <button class="form-submit" type="submit">Send Message</button>
+  </form>
+
+</section>
+</html>
+</body>

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Indie+Flower&family=Mr+Dafoe&family=Rubik:ital,wght@1,600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Indie Flower", cursive;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #febc4e;
+  background-image: url('https://iili.io/J6cZrrv.jpg');
+  background-size: 225vw 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+  margin-top: 20px;
+  width: 80vmin;
+  height: 55vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2{
+  text-align: center;
+  font-family: cursive;
+  font-weight: ;
+}
+
+lable{
+  font-weight: bold;
+}
+
+input,
+textarea{
+  background: none;
+  border: none;
+  border-bottom: 2px dotted hotpink;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+input:focus,
+textarea:focus{
+	outline: none;
+}
+
+textarea{
+  border-bottom: none;
+  margin-top: 20px;
+  margin-left: -20px;
+  width: 45vmin;
+  height: 25vmax;
+}
+
+#class,
+#sec{
+  width: 52px;
+}
+
+@media (min-width: 1300px){
+  body{
+    background-size: cover;
+  }
+  *{
+    font-size: 1.3rem;
+  }
+  form{
+    margin-top: 120px;
+  }
+}
