@@ -102,6 +102,7 @@ main{
   min-height: 100vh;
   background: black;
   color: white;
+  overflow: hidden;
 }
 
 main nav{
@@ -184,6 +185,7 @@ main nav ul li.active a{
   color: white;
   box-shadow: 0 10px 20px var(--clr),
               inset 0 -10px 20px black;
+  transition: 0.1s;
 }
 
 main nav ul li.active:nth-child(1) ~ span{
@@ -201,3 +203,77 @@ main nav ul li.active:nth-child(4) ~ span{
 main nav ul li.active:nth-child(5) ~ span{
   left: 81.6%;
 }
+
+/* desktop */
+@media(min-width: 1020px){
+  main nav{
+    width: auto;
+    height: 100vh;
+    bottom: none;
+    top: 0;
+  }
+  main nav ul{
+    width: 3rem;
+    height: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    bottom: none;
+    top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+ }
+ 
+ main nav ul li{
+    margin-top: 50px;
+ }
+ 
+ main nav ul span{
+  bottom: none;
+  left: 1.25em;
+}
+
+main nav ul span::before,
+main nav ul span::after{
+  top: none;
+  left: 6%;
+}
+
+main nav ul span::before{
+  left: none;
+  top: -47%;
+}
+
+main nav ul span::after{
+  right: 0;
+  bottom: -47%;
+}
+
+main nav ul li.active a{
+  bottom: none;
+  left: 1.50rem;
+  box-shadow: -10px 0 20px var(--clr),
+              inset 10px 0 20px black;
+}
+
+main nav ul li.active:nth-child(1) ~ span{
+  left: none;
+  top: 30px
+}
+main nav ul li.active:nth-child(2) ~ span{
+  left: none;
+  top: 60px;
+}
+main nav ul li.active:nth-child(3) ~ span{
+  left: none;
+  top: 90px;
+}
+main nav ul li.active:nth-child(4) ~ span{
+  left: none;
+  top: 120px;
+}
+main nav ul li.active:nth-child(5) ~ span{
+  left: none;
+  top: 500px;
+}
+  }
