@@ -1,0 +1,203 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+}
+
+.load{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background: #042104;
+  transition: all 1s;
+  animation: color 8s linear infinite;
+}
+
+@keyframes color{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+.load .container{
+  transform: rotate(90deg);
+  display: flex;
+}
+
+.load .container .circle{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 -7.5px;
+}
+
+.load .container .circle span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+
+.load .container .circle span::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: calc(50% - 7.5px);
+  width: 15px;
+  height: 15px;
+  background: #00ff0a;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff0a,
+              0 0 20px #00ff0a,
+              0 0 40px #00ff0a,
+              0 0 60px #00ff0a,
+              0 0 80px #00ff0a,
+              0 0 100px #00ff0a;
+  transform: scale(0.1);
+  animation: loder 4s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes loder{
+  0%{
+    transform: scale(1);
+  }
+  50%,100%{
+    transform: scale(0.1);
+  }
+}
+
+.load .container .circle:nth-child(2){
+  transform: rotate(180deg);
+}
+
+/* .load .container .circle:nth-child(2) span::before
+{
+  animation-delay: calc(-0.1s * var(--i));
+} */
+
+.hidden{
+  opacity: 0;
+  visibility: 0;
+}
+
+main{
+  width: 100vw;
+  min-height: 100vh;
+  background: black;
+  color: white;
+}
+
+main nav{
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+}
+
+main nav ul{
+  background: white;
+  color: black;
+  list-style: none;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+
+main nav ul li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: black;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 15px;
+  background: transparent;
+}
+
+main nav ul li a ion-icon{
+  font-size: 1.5rem;
+}
+
+main nav ul span{
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  z-index: -2;
+  bottom: 1.10em;
+  border-radius: 50%;
+  background: white;
+  transition: 0.3s;
+}
+
+main nav ul span::before,
+main nav ul span::after{
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: transparent;
+  position: absolute;
+  z-index: -1;
+  top: 6%;
+}
+
+main nav ul span::before{
+  left: -47%;
+  box-shadow: 10px 15px white;
+}
+
+main nav ul span::after{
+  right: -47%;
+  box-shadow: -10px 15px white;
+}
+
+main nav ul li.active a{
+  background: var(--clr);
+  bottom: 1.50rem;
+  color: white;
+  box-shadow: 0 10px 20px var(--clr),
+              inset 0 -10px 20px black;
+}
+
+main nav ul li.active:nth-child(1) ~ span{
+  left: 1.6%;
+}
+main nav ul li.active:nth-child(2) ~ span{
+  left: 21.6%;
+}
+main nav ul li.active:nth-child(3) ~ span{
+  left: 41.6%;
+}
+main nav ul li.active:nth-child(4) ~ span{
+  left: 61.6%;
+}
+main nav ul li.active:nth-child(5) ~ span{
+  left: 81.6%;
+}
