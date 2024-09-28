@@ -142,7 +142,7 @@ main nav ul li a{
 }
 
 main nav ul li a ion-icon{
-  font-size: 1.5rem;
+  font-size: 1.45rem;
 }
 
 main nav ul span{
@@ -188,22 +188,6 @@ main nav ul li.active a{
   transition: 0.1s;
 }
 
-main nav ul li.active:nth-child(1) ~ span{
-  left: 1.6%;
-}
-main nav ul li.active:nth-child(2) ~ span{
-  left: 21.6%;
-}
-main nav ul li.active:nth-child(3) ~ span{
-  left: 41.6%;
-}
-main nav ul li.active:nth-child(4) ~ span{
-  left: 61.6%;
-}
-main nav ul li.active:nth-child(5) ~ span{
-  left: 81.6%;
-}
-
 /* desktop */
 @media(min-width: 1020px){
   main nav{
@@ -212,8 +196,9 @@ main nav ul li.active:nth-child(5) ~ span{
     bottom: none;
     top: 0;
   }
+  
   main nav ul{
-    width: 3rem;
+    width: 3vw;
     height: 100%;
     justify-content: flex-start;
     flex-direction: column;
@@ -224,56 +209,46 @@ main nav ul li.active:nth-child(5) ~ span{
     border-bottom-right-radius: 13px;
  }
  
- main nav ul li{
+ main nav ul li a{
     margin-top: 50px;
+    padding: 20px;
  }
  
+ main nav ul li a ion-icon{
+    font-size: 2rem;
+}
+ 
  main nav ul span{
-  bottom: none;
-  left: 1.25em;
-}
+    bottom: none;
+    width: 5.5rem;
+    height: 5.5rem;
+    left: 1.4vw;
+ }
 
-main nav ul span::before,
-main nav ul span::after{
-  top: none;
-  left: 6%;
-}
+  main nav ul span::before,
+  main nav ul span::after{
+    top: none;
+    left: 1.3vw;
+    width: 2.5rem;
+    height: 2.5rem;
+ }
 
-main nav ul span::before{
-  left: none;
-  top: -47%;
-}
+  main nav ul span::before{
+    left: none;
+    top: -42.5%;
+    box-shadow: -15px 10px white;
+ }
 
-main nav ul span::after{
-  right: 0;
-  bottom: -47%;
-}
+  main nav ul span::after{
+    right: none;
+    top: 98%;
+    box-shadow: -15px -10px white;
+ }
 
-main nav ul li.active a{
-  bottom: none;
-  left: 1.50rem;
-  box-shadow: -10px 0 20px var(--clr),
-              inset 10px 0 20px black;
+  main nav ul li.active a{
+    bottom: none;
+    left: 1.5vw;
+    box-shadow: -10px 0 20px var(--clr),
+                inset 10px 0 20px black;
+ }
 }
-
-main nav ul li.active:nth-child(1) ~ span{
-  left: none;
-  top: 30px
-}
-main nav ul li.active:nth-child(2) ~ span{
-  left: none;
-  top: 60px;
-}
-main nav ul li.active:nth-child(3) ~ span{
-  left: none;
-  top: 90px;
-}
-main nav ul li.active:nth-child(4) ~ span{
-  left: none;
-  top: 120px;
-}
-main nav ul li.active:nth-child(5) ~ span{
-  left: none;
-  top: 500px;
-}
-  }
