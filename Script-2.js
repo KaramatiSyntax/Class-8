@@ -10,7 +10,7 @@ window.addEventListener('load', ()=>{
     loader.className = "load hidden";
     if(desktop.matches){
       indicator.style.left = `none`
-      indicator.style.top = `${lists[0].offsetTop + 18}px`
+      indicator.style.top = `${lists[0].offsetTop + 17.5}px`
     }else{
       indicator.style.left = `${lists[0].offsetLeft - 5}px`;
     }
@@ -26,7 +26,7 @@ function activelink(){
     this.classList.add("active");
     if(desktop.matches){
       indicator.style.left = `none`
-      indicator.style.top = `${this.offsetTop + 18}px`
+      indicator.style.top = `${this.offsetTop + 17.5}px`
     }else{
       indicator.style.left = `${this.offsetLeft - 5}px`;
     }
