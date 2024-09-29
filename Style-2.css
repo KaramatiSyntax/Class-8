@@ -198,7 +198,7 @@ main nav ul li.active a{
   }
   
   main nav ul{
-    width: 3vw;
+    width: 5rem;
     height: 100%;
     justify-content: flex-start;
     flex-direction: column;
@@ -215,40 +215,40 @@ main nav ul li.active a{
  }
  
  main nav ul li a ion-icon{
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
  
  main nav ul span{
     bottom: none;
-    width: 5.5rem;
-    height: 5.5rem;
-    left: 1.4vw;
+    width: 5.83rem;
+    height: 5.83rem;
+    left: 2.3rem;
  }
 
   main nav ul span::before,
   main nav ul span::after{
     top: none;
-    left: 1.3vw;
-    width: 2.5rem;
-    height: 2.5rem;
+    left: 2.6rem;
+    width: 2rem;
+    height: 2rem;
  }
 
   main nav ul span::before{
     left: none;
-    top: -42.5%;
+    top: -33.3%;
     box-shadow: -15px 10px white;
  }
 
   main nav ul span::after{
     right: none;
-    top: 98%;
+    top: 99%;
     box-shadow: -15px -10px white;
  }
 
   main nav ul li.active a{
     bottom: none;
-    left: 1.5vw;
+    left: 2.5rem;
     box-shadow: -10px 0 20px var(--clr),
                 inset 10px 0 20px black;
- }
+  }
 }
